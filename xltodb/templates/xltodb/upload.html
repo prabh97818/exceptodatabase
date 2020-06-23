@@ -1,0 +1,27 @@
+{% extends 'xltodb/layout.html' %}
+{% load static %}
+
+{% block body %}
+		<div class="container-login100">
+			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
+                <center> <h1>Upload your excel data to database</h1></br>
+                <form class="login100-form validate-form my-4" method = 'post' action = "" enctype = 'multipart/form-data'>
+                {% csrf_token %}
+
+					<div class="py-4" style="border: 1px solid black">
+						<label for="id_upload_file">Drag and Drop Your file Here!</label>
+						<input type="file" name="upload_file" required="" id="id_upload_file">
+					</div>&gt;	
+					<div class="container-login100-form-btn my-4">
+							<button class="btn btn-info" type = 'submit'>
+								Upload
+							</button>
+						</div>
+					</div>
+
+                </form>
+			</div>
+		</div>
+
+
+{% endblock %}
